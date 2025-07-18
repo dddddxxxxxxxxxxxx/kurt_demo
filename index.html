@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页</title>
+    <style>
+        /* 基础样式 */
+        :root {
+            --primary: #3498db;   /* 主色调 */
+            --dark: #2c3e50;      /* 深色文本 */
+            --light: #f8f9fa;     /* 浅色背景 */
+            --gray: #6c757d;      /* 辅助色 */
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        
+        /* 区块样式 */
+        section {
+            background: rgba(255,255,255,0.85);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary);
+        }
+        
+        /* 个人信息区 */
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary);
+        }
+        
+        /* 时间线样式（教育/工作） */
+        .timeline-item {
+            margin-bottom: 25px;
+            padding-left: 20px;
+            border-left: 2px solid var(--primary);
+        }
+        .timeline-item h3 {
+            color: var(--dark);
+        }
+        
+        /* 兴趣爱好卡片 */
+        .hobbies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .hobby-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            flex: 1;
+            min-width: 150px;
+            text-align: center;
+        }
+        
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .profile-header { flex-direction: column; text-align: center; }
+            section { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- 个人信息 -->
+    <section id="profile">
+        <div class="profile-header">
+            <img src="证件照.jpg" alt="个人照片" class="profile-img">
+            <div>
+                <h1>杜董欣</h1>
+                <p>后端开发工程师 | 西安</p>
+                <p>专注java技术栈</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 教育背景 -->
+    <section id="education">
+        <h2>教育经历</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>计算机科学学士</h3>
+                <p>西安电子科技大学 | 2020-2024</p>
+                <p>主修课程：java开发、数据结构、计算机网络</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 个人想法 -->
+    <section id="thoughts">
+        <h2>近期思考</h2>
+        <div class="thought">
+            <h3>关于人工智能的思考</h3>
+            <p>2025年7月18日</p>
+            <p>技术发展应该服务于人类的核心价值，而不是替代人类的创造力...</p>
+        </div>
+    </section>
+</body>
+</html>
